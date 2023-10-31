@@ -16,6 +16,11 @@ app.post("/timeWork",async(req,res)=>{
     }
     
 })
+app.get("/", (req,res)=>{
+  
+    res.send("Server is Started");
+   
+})
 app.get("/timeWork", async (req,res)=>{
     try {
         const timeApi = await timeWork.find();
