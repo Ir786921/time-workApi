@@ -21,7 +21,7 @@ app.get("/", (req,res)=>{
     res.send("Server is Started");
    
 })
-app.get("/timeWork", async (req,res)=>{
+app.get("/timework", async (req,res)=>{
     try {
         const timeApi = await timeWork.find();
         res.status(200).send(timeApi);
