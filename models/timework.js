@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const timeWorkSchema = new mongoose.Schema({
+const timeWorkSchema2 = new mongoose.Schema({
 Question:{
     type:String,
     required:true,
@@ -33,5 +33,5 @@ Answer:{
 
 })
 
-const timeWork = new mongoose.model('timeWork',timeWorkSchema);
-module.exports = timeWork;
+const timew = new mongoose.model('timew',timeWorkSchema2);
+module.exports = timew;

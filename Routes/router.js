@@ -3,7 +3,7 @@ const router = express.Router();
 const {showHome,showalldata,adddata} = require("../controller/contro");
 
 router.route("/").get(showHome);
-router.route("/timework").get(showalldata);
-router.route("/timework").post(adddata);
+router.route("/twtest").get(showalldata);
+router.route("/twtest").post(adddata);
 
 module.exports = router;
