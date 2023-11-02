@@ -33,5 +33,5 @@ Answer:{
 
 })
 
-const timew = new mongoose.model('timew',timeWorkSchema2);
-module.exports = timew;
+const Timew = new mongoose.model('Timew',timeWorkSchema2);
+module.exports = Timew;
