@@ -29,6 +29,10 @@ option4:{
 Answer:{
     type:String,
     required:true
+},
+quesId:{
+    type:Number,
+    required:true
 }
 
 })

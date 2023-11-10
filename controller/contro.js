@@ -1,9 +1,7 @@
 const timew = require("../models/timework");
-const showHome = (req,res)=>{
-    res.send("hlw from home");
-}
 
-const showalldata = async(req,res)=>{
+
+const showalldata = async (req,res)=>{
 
     
     try {
@@ -14,13 +12,25 @@ const showalldata = async(req,res)=>{
     }
 }
 
-const adddata = async(req,res)=>{
+const getindi = async (req,res)=>{
+    try {
+        const id = req.params.quesId;
+        const getIndi = await timew.findOne({quesId:id});
+        res.status(200).json(getIndi);
+        
+    } catch (error) {
+        res.status(404).json(error);
+    }
+}
+
+const adddata = async (req,res)=>{
     const Addquestion = new timew({
         Question:req.body.Question,
         option1:req.body.option1,
         option2:req.body.option2,
         option3:req.body.option3,
         option4:req.body.option4,
+        id:req.body.id,
         Answer:req.body.Answer
     });
     try {
@@ -35,4 +45,4 @@ const adddata = async(req,res)=>{
     
 }
 
-module.exports = {showHome,showalldata,adddata};
+module.exports = {showalldata,adddata,getindi};

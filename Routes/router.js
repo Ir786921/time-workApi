@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const {showHome,showalldata,adddata} = require("../controller/contro");
+const {showalldata,adddata,getindi} = require("../controller/contro");
 
-router.get("/", showHome);
-router.get("/getdata",showalldata);
-router.post("/postdata",adddata);
+router.get("/timework",showalldata);
+router.post("/timework",adddata);
+router.get("/timework/:quesId",getindi);
 
 module.exports = router;

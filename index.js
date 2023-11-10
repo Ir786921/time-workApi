@@ -1,34 +1,4 @@
-// require("dotenv").config();
-// const express = require("express");
 
-// const Cors = require("cors");
-// require("./db/conn");
-// const app = express();
-// app.use(express.json());
-// app.use(Cors());
-// const port = process.env.PORT || 3000;
-// const Route = require("./Routes/router");
-// const connect = require("./db/conn")
-// app.use("/api",Route);
-
-// app.get("/",(req,res)=>{
-//     res.send("Server is started");
-// })
-
-// const start = async ()=>{
-//     try {
-//         await connect(process.env.CONNECTION_URL)
-      
-        
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
-// start();
-
-// app.listen(port,()=>{
-//     console.log( `server is running in http://localhost:${port}`);
-// })
 
 require("dotenv").config();
 const express = require("express");
@@ -41,7 +11,7 @@ app.use(cors());
 
 const port = process.env.PORT || 3000;
 const Route = require("./Routes/router");
-app.use("/api", Route);
+app.use("/api/aptitude", Route);
 
 // Connect to MongoDB
 const connectDB = async () => {
